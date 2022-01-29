@@ -1,0 +1,15 @@
+{
+  "name": "@candyfloss/nuxt",
+  "version": "0.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "repository": "https://github.com/thombruce/candyfloss",
+  "author": "Thom Bruce <thom@thombruce.com>",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "web3": "^1.7.0"
+  }
+}
