@@ -1,0 +1,20 @@
+{
+  "name": "candyfloss",
+  "version": "0.0.0",
+  "author": "Thom Bruce <thom@thombruce.com>",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "release": "yarn release:patch",
+    "release:patch": "lerna publish --yes --cd-version=patch",
+    "release:minor": "lerna publish --yes --cd-version=minor",
+    "release:major": "lerna publish --yes --cd-version=major"
+  },
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  }
+}
