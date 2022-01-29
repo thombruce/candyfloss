@@ -1,3 +1,5 @@
+import { join, resolve } from 'path'
+
 export default async function () {
   const { nuxt } = this
 
