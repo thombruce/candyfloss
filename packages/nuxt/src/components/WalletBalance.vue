@@ -5,22 +5,17 @@ span {{ balance }}
 <script>
 export default {
   props: {
-    address: String,
-    httpProvider: String
+    address: String
   },
   data () {
     return {
       balance: null
     }
   },
-  mounted () {
-    this.initCandyFloss()
+  created () {
     this.fetchBalance()
   },
   methods: {
-    initCandyFloss () {
-      this.$candyfloss.init(this.httpProvider)
-    },
     async fetchBalance () {
       this.balance = await this.$candyfloss.getBalance(this.address)
     }

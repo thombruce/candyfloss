@@ -9,7 +9,7 @@ export default async function () {
   }
 
   this.addPlugin({
-    src: resolve(__dirname, 'plugins/web3.js')
+    src: resolve(__dirname, 'plugins/candyfloss.js')
   })
 
   this.nuxt.hook('modules:before', () => {
