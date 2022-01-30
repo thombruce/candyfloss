@@ -10,6 +10,6 @@
     "access": "public"
   },
   "dependencies": {
-    "web3": "^1.7.0"
+    "@candyfloss/js": "^0.0.0"
   }
 }
