@@ -1,4 +1,4 @@
-import Web3 from 'web3'
+const Web3 = require('web3')
 
 class CandyFloss {
   constructor () {
@@ -15,4 +15,4 @@ class CandyFloss {
   }
 }
 
-export default CandyFloss
+module.exports = CandyFloss
