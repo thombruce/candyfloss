@@ -10,25 +10,19 @@ export default {
   },
   data () {
     return {
-      web3: null,
-      wei: null
-    }
-  },
-  computed: {
-    balance () {
-      if (this.wei) return this.web3.utils.fromWei(this.wei)
+      balance: null
     }
   },
   mounted () {
-    this.initWeb3()
+    this.initCandyFloss()
     this.fetchBalance()
   },
   methods: {
-    initWeb3 () {
-      this.web3 = new this.$Web3(this.$Web3.givenProvider || this.httpProvider)
+    initCandyFloss () {
+      this.$candyfloss.init(this.httpProvider)
     },
     async fetchBalance () {
-      this.wei = await this.web3.eth.getBalance(this.address)
+      this.balance = await this.$candyfloss.getBalance(this.address)
     }
   }
 }
