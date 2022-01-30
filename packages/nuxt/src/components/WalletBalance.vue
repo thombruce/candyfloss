@@ -1,20 +1,12 @@
 <template lang='pug'>
-span
-  | {{ balance }}
-  |
-  span(v-if='showCurrency')
-  | ETH
+span {{ balance }}
 </template>
 
 <script>
 export default {
   props: {
     address: String,
-    httpProvider: String,
-    showCurrency: {
-      type: Boolean,
-      default: true
-    }
+    httpProvider: String
   },
   data () {
     return {
