@@ -10,6 +10,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@candyfloss/js": "^0.1.10"
+    "@candyfloss/js": "^0.1.10",
+    "@candyfloss/vue": "^0.1.10"
   }
 }
