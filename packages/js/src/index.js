@@ -2,7 +2,7 @@ const Web3 = require('web3')
 
 class CandyFloss extends Web3 {
   constructor (provider) {
-    super(provider)
+    super(Web3.givenProvider || provider)
   }
 
   async getBalance (address) {

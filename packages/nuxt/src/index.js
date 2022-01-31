@@ -10,6 +10,7 @@ export default async function (moduleOptions) {
 
   this.addPlugin({
     src: resolve(__dirname, 'plugins/candyfloss.js'),
+    // mode: 'client',
     options: {
       provider: moduleOptions.provider
     }
