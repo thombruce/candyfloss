@@ -1,6 +1,6 @@
 import { join, resolve } from 'path'
 
-export default async function () {
+export default async function (moduleOptions) {
   const { nuxt } = this
 
   // Make sure components is enabled
@@ -9,7 +9,10 @@ export default async function () {
   }
 
   this.addPlugin({
-    src: resolve(__dirname, 'plugins/candyfloss.js')
+    src: resolve(__dirname, 'plugins/candyfloss.js'),
+    options: {
+      provider: moduleOptions.provider
+    }
   })
 
   this.nuxt.hook('modules:before', () => {

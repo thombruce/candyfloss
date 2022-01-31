@@ -40,7 +40,7 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     '@rockband/nuxt',
-    '@candyfloss/nuxt'
+    ['@candyfloss/nuxt', { provider: 'https://mainnet.infura.io/v3/a185cad5258f4c89a0107035403eaa4e' }]
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

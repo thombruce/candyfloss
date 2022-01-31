@@ -22,9 +22,6 @@ export default {
       })
 
     return { slug, page }
-  },
-  created () {
-    this.$candyfloss.init('https://mainnet.infura.io/v3/a185cad5258f4c89a0107035403eaa4e')
   }
 }
 </script>
