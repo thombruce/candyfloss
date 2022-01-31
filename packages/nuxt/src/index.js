@@ -1,4 +1,4 @@
-import { join, resolve } from 'path'
+import { join, resolve, dirname } from 'path'
 
 export default async function (moduleOptions) {
   const { nuxt } = this
@@ -33,6 +33,15 @@ export default async function (moduleOptions) {
       path: join(__dirname, "components"),
       prefix: "CandyFloss",
       level: 1
+    })
+  })
+
+  this.nuxt.hook("components:dirs", (dirs) => {
+    // Add ./components dir to the list
+    dirs.push({
+      path: join(dirname(require.resolve("@candyfloss/vue/package.json")), "src/components"),
+      prefix: "CandyFloss",
+      level: 2
     })
   })
 }
