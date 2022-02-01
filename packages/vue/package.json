@@ -1,6 +1,6 @@
 {
   "name": "@candyfloss/vue",
-  "version": "0.1.13",
+  "version": "0.1.14",
   "description": "",
   "main": "src/index.js",
   "repository": "https://github.com/thombruce/candyfloss.git",
@@ -10,6 +10,6 @@
     "access": "public"
   },
   "dependencies": {
-    "@candyfloss/js": "^0.1.13"
+    "@candyfloss/js": "^0.1.14"
   }
 }
