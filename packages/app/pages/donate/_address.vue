@@ -31,6 +31,10 @@ div.text-center
     div
       p(class="mt-2 text-sm text-gray-500")
         | CandyFloss will connect with your wallet to finalise the transaction. Always make sure that you are sending the correct amount to the address you mean to. CandyFloss and its developers accept no liability for lost funds.
+
+    div.mt-10
+      p
+        NuxtLink(:to="{ name: 'donate-new' }") Create your own page
 </template>
 
 <script>
