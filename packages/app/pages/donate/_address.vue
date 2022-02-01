@@ -1,6 +1,6 @@
 <template lang='pug'>
 div.text-center
-  form
+  form(@submit.prevent='donate()')
     div.py-10.text-4xl(v-if='showBalance')
       RockBandSimpleIcon(icon='ethereum')
       CandyFlossWalletBalance(:address='address')
@@ -16,7 +16,7 @@ div.text-center
         class='bg-gray-300 dark:bg-gray-800'
       )
     div
-      CandyFlossDonateButton.py-2.px-3.bg-blue-400(:to='address' :value='eth')
+      button.py-2.px-3.bg-blue-400(type='submit') Donate {{ this.eth }} Eth
 </template>
 
 <script>
@@ -29,6 +29,16 @@ export default {
       address: this.$route.params.address,
       showBalance: this.$route.query.b,
       eth: this.$route.query.e || '.005'
+    }
+  },
+  computed: {
+    wei () {
+      return this.$candyfloss.utils.toWei(this.eth)
+    }
+  },
+  methods: {
+    donate () {
+      this.$candyfloss.donate(null, this.address, this.wei)
     }
   }
 }
