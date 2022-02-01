@@ -1,5 +1,7 @@
 <template lang='pug'>
 div
+  h1(v-if='displayName') {{ displayName }}
+  p(v-if='message') {{ message }}
   input.form-input.px-4.py-3.rounded-full(
     type='number'
     min='0'
@@ -14,6 +16,8 @@ div
 export default {
   data () {
     return {
+      displayName: this.$route.query.n,
+      message: this.$route.query.m,
       address: this.$route.params.address,
       eth: '.005'
     }
