@@ -3,7 +3,7 @@ export default {
   target: 'static',
 
   env: {
-    baseUrl: process.env.VERCEL_URL || 'http://localhost:3000'
+    baseUrl: process.env.BASE_URL || 'http://localhost:3000'
   },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
