@@ -4,19 +4,19 @@ div
     div
       label Name
       br
-      input.form-input(type='text' v-model='displayName')
+      input(type='text' v-model='displayName')
     div
       label Message
       br
-      textarea.form-textarea(v-model='message')
+      textarea(v-model='message')
     div
       label Address
       br
-      input.form-input(type='text' v-model='address')
+      input(type='text' v-model='address')
     div
       label Default Amount
       br
-      input.form-input(type='number' min='0' step='.0005' v-model='defaultEth')
+      input(type='number' min='0' step='.0005' v-model='defaultEth')
 
     div
       button(@click='create') Create

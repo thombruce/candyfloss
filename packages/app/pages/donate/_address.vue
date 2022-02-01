@@ -2,7 +2,7 @@
 div
   h1(v-if='displayName') {{ displayName }}
   p(v-if='message') {{ message }}
-  input.form-input.px-4.py-3.rounded-full(
+  input.px-4.py-3.rounded-full(
     type='number'
     min='0'
     step='.0005'
