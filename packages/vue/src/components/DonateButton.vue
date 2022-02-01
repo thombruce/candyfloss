@@ -1,13 +1,22 @@
 <template lang='pug'>
 div
-  button(@click='donate') Donate .005 Eth
+  button(@click='donate') Donate {{ value }} Eth
 </template>
 
 <script>
 export default {
+  props: [
+    'to',
+    'value'
+  ],
+  computed: {
+    wei () {
+      return this.$candyfloss.utils.toWei(this.value)
+    }
+  },
   methods: {
     donate () {
-      this.$candyfloss.donate('5000000000000000')
+      this.$candyfloss.donate(null, this.to, this.wei)
     }
   }
 }

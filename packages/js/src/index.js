@@ -17,9 +17,9 @@ class CandyFloss extends Web3 {
     return this.utils.fromWei(wei)
   }
 
-  donate (value) {
+  donate (from = this.eth.defaultAccount, to = this.address, value) {
     this.connectWallet(
-      () => { this.sendTransaction(value) }
+      () => { this.sendTransaction(from, to, value) }
     )
   }
 
@@ -35,9 +35,10 @@ class CandyFloss extends Web3 {
     )
   }
 
-  sendTransaction (value) {
+  sendTransaction (from = this.eth.defaultAccount, to = this.address, value) {
     this.eth.sendTransaction({
-      to: this.address,
+      from: from,
+      to: to,
       value: value
     })
     .then((receipt) => {})
