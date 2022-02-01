@@ -2537,10 +2537,10 @@
   resolved "https://registry.yarnpkg.com/@polka/url/-/url-1.0.0-next.21.tgz#5de5a2385a35309427f6011992b544514d559aa1"
   integrity sha512-a5Sab1C4/icpTZVzZc5Ghpz88yQtGOyNqYXcZgOssB2uuAr+wF/MvN6bgtW32q7HHrvBki+BsZ0OuNv6EV3K9g==
 
-"@rockband/nuxt@^0.8.2":
-  version "0.8.2"
-  resolved "https://registry.yarnpkg.com/@rockband/nuxt/-/nuxt-0.8.2.tgz#7ba506ec17918ecb716cd34ca66f1472577319db"
-  integrity sha512-jprsjBTynGbuhr5m1bMvv0/QaOIappDDmkIhdJ2JsY0M1aduHynRcPOslySkeq/pWXat1nkT+XCmVAcQyaI6/w==
+"@rockband/nuxt@^0.8.3":
+  version "0.8.3"
+  resolved "https://registry.yarnpkg.com/@rockband/nuxt/-/nuxt-0.8.3.tgz#af7f21664c9c0dd54e5780adfcc50b23c855b4ac"
+  integrity sha512-IxCB0Zdi9KKi1XzvFteOxeCuPEeZrrFiAqnoYKHhFrMCk4C6acDAtmyGYo7tItch4syUNfTA+9op63WDsTBuWA==
   dependencies:
     "@nuxt/content" "^1.15.1"
     "@nuxt/image" "^0.5.0"
