@@ -9,6 +9,12 @@
     "packages/*"
   ],
   "scripts": {
+    "docs:dev": "cd packages/docs && yarn dev",
+    "docs:build": "cd packages/docs && yarn build",
+    "docs:generate": "cd packages/docs && yarn generate",
+    "app:dev": "cd packages/app && yarn dev",
+    "app:build": "cd packages/app && yarn build",
+    "app:generate": "cd packages/app && yarn generate",
     "release": "yarn release:patch",
     "release:patch": "lerna publish --yes --cd-version=patch",
     "release:minor": "lerna publish --yes --cd-version=minor",
