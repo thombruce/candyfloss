@@ -1,6 +1,6 @@
 {
   "name": "@candyfloss/nuxt",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "description": "",
   "main": "src/index.js",
   "repository": "https://github.com/thombruce/candyfloss",
@@ -10,7 +10,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@candyfloss/js": "^0.1.12",
-    "@candyfloss/vue": "^0.1.12"
+    "@candyfloss/js": "^0.1.13",
+    "@candyfloss/vue": "^0.1.13"
   }
 }
