@@ -7,7 +7,7 @@ div
     v-model='eth'
     class='bg-gray-300 dark:bg-gray-800'
   )
-  CandyFlossDonateButton(:to='address' :value='eth')
+  CandyFlossDonateButton.rounded-full.bg-pink-500(:to='address' :value='eth')
 </template>
 
 <script>
