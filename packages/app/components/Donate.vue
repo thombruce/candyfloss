@@ -1,8 +1,10 @@
 <template lang='pug'>
 client-only
   div.text-center
-    form(@submit.prevent='donate()')
-      div.pt-10.pb-3.text-2xl(v-if='showBalance')
+    form.mt-10(@submit.prevent='donate()')
+      VueQr(:text='address' margin='15')
+
+      div.py-3.text-2xl(v-if='showBalance')
         RockBandSimpleIcon(icon='ethereum')
         CandyFlossWalletBalance(:address='address')
 
@@ -39,8 +41,13 @@ client-only
 </template>
 
 <script>
+import VueQr from 'vue-qr'
+
 export default {
   layout: 'headerless',
+  components: {
+    VueQr
+  },
   data () {
     return {
       displayName: this.$route.query.n,
