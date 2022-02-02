@@ -61,12 +61,13 @@ export default {
   computed: {
     previewLink () {
       let query = {}
+      if (this.address) query.a = this.address
       if (this.displayName) query.n = this.displayName
       if (this.message) query.m = this.message
       if (this.showBalance) query.b = 1
       if (this.defaultEth) query.e = this.defaultEth
       
-      if (this.address) return { name: 'donate-address', params: { address: this.address }, query: query }
+      if (this.address) return { name: 'donate', query: query }
     },
     asString () {
       if (this.previewLink) return process.env.baseUrl + this.$router.resolve(this.previewLink).href

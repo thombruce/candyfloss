@@ -44,18 +44,15 @@ client-only
 import VueQr from 'vue-qr'
 
 export default {
-  layout: 'headerless',
+  props: {
+    address: String,
+    displayName: String,
+    message: String,
+    showBalance: [String, Boolean, Number],
+    eth: [String, Number]
+  },
   components: {
     VueQr
-  },
-  data () {
-    return {
-      displayName: this.$route.query.n,
-      message: this.$route.query.m,
-      address: this.$route.params.address,
-      showBalance: this.$route.query.b,
-      eth: this.$route.query.e || ''
-    }
   },
   computed: {
     wei () {
