@@ -5,7 +5,7 @@ div
       v-model='displayName'
       id='displayName'
       label='Name'
-      placeholder='John Doe'
+      placeholder='Jane Doe'
     )
     RockBandFormTextarea.my-3(
       v-model='message'
